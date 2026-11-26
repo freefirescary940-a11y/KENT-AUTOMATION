@@ -1,0 +1,9 @@
+{
+  "name": "kent-stock-app",
+  "version": "1.0.0",
+  "description": "Kent water purifier service - technician stock, sales and discount approval",
+  "main": "server.js",
+  "scripts": { "start": "node --env-file=.env server.js", "start:prod": "node server.js", "dev": "node --watch --env-file=.env server.js" },
+  "engines": { "node": ">=20.6" },
+  "dependencies": { "bcryptjs": "^2.4.3", "express": "^4.19.2", "jsonwebtoken": "^9.0.2", "nodemailer": "^6.9.14", "pg": "^8.11.3" }
+}

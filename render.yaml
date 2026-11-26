@@ -1,0 +1,29 @@
+# One-click setup for Render (Blueprint). Paid Starter plan + 1 GB disk keeps your data.
+services:
+  - type: web
+    name: kent-stock
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm run start:prod
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATA_DIR
+        value: /data
+      - key: ADMIN_ID
+        value: gnane
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_EMAIL
+        value: paidignane708@gmail.com
+      - key: MAIL_FROM
+        sync: false
+      - key: BREVO_API_KEY
+        sync: false
